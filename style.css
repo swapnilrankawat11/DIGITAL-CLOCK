@@ -1,0 +1,97 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.clock-container {
+  text-align: center;
+}
+
+.clock {
+  font-size: 5rem;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 12px;
+  animation: fadeIn 1s ease-in-out;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Theme Selector */
+.theme-selector {
+  margin-top: 1.5rem;
+}
+
+.theme-selector label {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.theme-selector select {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Light Mode Theme */
+body.light {
+  background-color: #f0f0f0;
+}
+
+body.light .clock {
+  color: #333;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Theme */
+body.dark {
+  background-color: #1d1c1c;
+}
+
+body.dark .clock {
+  color: #ffffff;
+  background-color: #393939;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Azure Bliss Theme */
+body.blue {
+  background-color: #2d39e9;
+}
+
+body.blue .clock {
+  color: #ffffff;
+  background-color: #4c68f1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Emerald Green Theme */
+body.green {
+  background-color: #32cd32;
+}
+
+body.green .clock {
+  color: #ffffff;
+  background-color: #4caf50;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
